@@ -21,7 +21,9 @@ def choise_test():
     for n in xrange(n_steps):
         start_value = randint(1,1000)
         values = [start_value, return_double_or_half(start_value)]
-        shuffle(values) # This is the critical line!
+        # The following is the critical line. If it is commented
+        # out, you choud change envelope. If not it doesn't matter!
+        #shuffle(values) 
         keep_env_value += values[0]
         change_env_value += values[1]
     print change_env_value/keep_env_value
